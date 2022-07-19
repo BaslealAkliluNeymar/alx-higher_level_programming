@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Defines a square class."""
+
+
 class Square:
     """Represents a square from task one.
     the Private instance attribute: size.
@@ -6,7 +9,11 @@ class Square:
     """
 
     def __init__(self, size=0):
-        """Initializes the data input."""
+        """Initializes the data input.
+
+        Args:
+            size (int):the size of the square
+        """
         self.__size = size
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
