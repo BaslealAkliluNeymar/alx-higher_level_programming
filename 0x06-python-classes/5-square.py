@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Define a square."""
 class Square:
     """Represents a square from task one continual.
     Private instance attribute: size:
@@ -10,7 +11,10 @@ class Square:
     """
 
     def __init__(self, size=0):
-        """Initializes the data."""
+        """Initializes the data.
+        Args:
+             size (int): The size of the square.
+        """
         self.__size = size
 
     @property
