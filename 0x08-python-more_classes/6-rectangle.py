@@ -7,12 +7,12 @@ Defines a Rectangle.
 class Rectangle:
     """Rectangle class defined by width and height.
     Attributes:
-        instances: number of Rectangle instances,
+        count: number of Rectangle instances,
         increments  by one every instantitation,
         decrements  by   one every deletion
     """
 
-    instances = 0
+    count = 0
 
     def __init__(self, width=0, height=0):
         """Initializes a Rectangle instance.
@@ -22,7 +22,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
-        Rectangle.instances += 1
+        Rectangle.count += 1
 
     def __str__(self):
         """Returns an informal and nicely printable string representation
@@ -45,7 +45,7 @@ class Rectangle:
     def __del__(self):
         """Deletes a Rectangle instance."""
         print("Bye rectangle...")
-        Rectangle.instances -= 1
+        Rectangle.count -= 1
 
     @property
     def width(self):
