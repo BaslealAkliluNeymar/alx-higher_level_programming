@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" Student to JSON """
+"""student to JSON """
 
 
 class Student:
-    """ New class student """
+    """class student """
 
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
@@ -11,7 +11,6 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """ Retrieves a dictionary representation of a Student instance """
         if attrs is None:
             return (self.__dict__)
         else:
@@ -20,9 +19,3 @@ class Student:
                 if hasattr(self, nm):
                     dic[nm] = getattr(self, nm)
             return (dic)
-
-    def reload_from_json(self, json):
-        """ Replacingall attributes of the Student instance"""
-        save = vars(self)
-        for key, value in json.items():
-            save[key] = value
