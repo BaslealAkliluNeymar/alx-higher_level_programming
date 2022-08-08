@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module rectangle.
+"""Class rectangle.
 Creates a Rectangle class.
 """
 import json
